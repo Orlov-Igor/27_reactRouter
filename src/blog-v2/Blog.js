@@ -6,6 +6,7 @@ import Home from "./containers/Home";
 import Users from "./containers/Users";
 import About from "./containers/About";
 import Posts from "./containers/Posts";
+import Todos from "./containers/Todos";
 import UserDetails from "./containers/UserDetails";
 import PostDetails from "./containers/PostDetails";
 import NotFound from "./containers/NotFound";
@@ -38,6 +39,9 @@ export default function BlogV2 () {
       <Route path='/posts' exact>
         <Posts />
       </Route>
+      <Route path='/todos' exact>
+        <Todos />
+      </Route>
       <Route path='/posts/:postId'>
         <PostDetails />
       </Route>
@@ -59,6 +63,7 @@ export default function BlogV2 () {
           <NavLink to='/users' className='item'>Users</NavLink>
           <NavLink to='/about' className='item'>About</NavLink>
           <NavLink to='/posts' className='item'>Posts</NavLink>
+          <NavLink to='/todos' className='item'>Todos</NavLink>
         </Menu>
         <AnimatedSwitch />
       </Router>

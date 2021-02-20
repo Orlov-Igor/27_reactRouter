@@ -5,7 +5,7 @@ import useData from "../hooks/useData";
 import LoadingOverlay from "./LoadingOverlay";
 import Album from "./Album";
 import Posts from "./Posts";
-import UserTodos from "./UserTodos";
+import Todos from "./Todos";
 
 
 function UserDetails() {
@@ -65,10 +65,10 @@ function UserDetails() {
               <Album />
             </Route>
             <Route path={`${path}/posts`}>
-              <Posts userId={userId}/>
+              <Posts />
             </Route>
             <Route path={`${path}/todos`}>
-              <UserTodos />
+              <Todos />
             </Route>
             <Route path='*'>
               <Header as='h3'>Select an album</Header>

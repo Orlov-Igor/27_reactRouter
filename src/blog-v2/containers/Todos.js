@@ -5,8 +5,10 @@ import useData from "../hooks/useData";
 import LoadingOverlay from "./LoadingOverlay"; 
 
 function UserTodos() {
-	const { userId }= useParams();
-	const [todos, isLoading] = useData(`users/${userId}/todos`, []);
+	const { userId } = useParams();
+	const todosPath = userId ? `/users/${userId}/todos` : '/todos' 
+    const [todos, isLoading] = useData(todosPath, [])
+
 	
 	return (
 	  <Container>
@@ -38,3 +40,7 @@ function UserTodos() {
   }
 
 export default UserTodos;
+
+
+
+		
